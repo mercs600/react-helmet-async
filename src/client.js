@@ -47,8 +47,8 @@ const updateTags = (type, tags) => {
   }
 
   oldTags.forEach(tag => tag.parentNode.removeChild(tag));
-  newTags.forEach(tag => headElement.appendChild(tag));
-
+  newTags.forEach(tag => headElement.insertAdjacentElement('afterbegin', tag));
+  
   return {
     oldTags,
     newTags,
